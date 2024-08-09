@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>춘천교육대학교부설초등학교 홈페이지</title>
+<style type="text/css">
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#head {
+    width: 100%;
+    max-width: 1903px;
+    height: 140px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 0 150px;
+    background-color: #f8f8f8;
+}
+
+#top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 1400px;
+    height: 80px;
+    margin : 0 auto;
+  	
+    
+}
+
+#top img {
+    height: auto;
+    max-width: 100%;
+}
+
+#login ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#login li {
+    position: relative;
+    padding: 10px;
+    color: #333;
+    font-size: 14px;
+}
+
+#login li::after {
+    content: "•";
+    color: #ccc;
+    position: absolute;
+    right: -3px;
+    top: 37%;
+    transform: translateY(-50%);
+}
+
+#login li:last-child::after {
+    content: "";
+}
+
+#login a {
+    text-decoration: none;
+    color: black;
+}
+
+#search {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.box_search_0 { position:absolute; top:21px; right:0; width:220px; height:38px; overflow:hidden; background:#f0f0f0; border-radius: 1.5rem;}
+.box_search_0 input { padding:0 48px 0 10px; width:100%; height:38px; line-height:38px; font-size:0.6rem; border:none; background:none; }
+.box_search_0 button { position:absolute; top:0; right:0; padding:0; width:38px; height:38px; border-radius: 50%; background:#176ad0 url('/tempSample/40009/images/common/btn_search_w.png') no-repeat center; border:none; }
+.box_search_0 input::-webkit-input-placeholder { color:#555; }
+
+
+
+
+
+#menu {
+    margin-top: 20px;
+    text-align: center; /* 중앙 정렬 추가 */
+}
+
+#menu ul {
+    display: inline-flex; /* inline-flex로 변경하여 중앙 정렬 */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu li {
+    margin-right: 20px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#menu a:hover {
+    background-color: #eee;
+}
+
+
+#photo {
+	width :1400px;
+	height : 171.34px;
+	margin : 0 auto;
+	
+	}
+
+
+#photo img{
+ 	width : 1400px;
+ 	height : 171.34px;
+	
+
+}
+
+ #main {
+
+	width:1400px;
+	height:1254px;
+	margin : 0 auto;
+}
+
+
+
+ #body1 {
+ 	
+ 	width : 100%;
+ 	height : 320px; 
+ 	border : 1px solid #ccc;
+   	display: flex;
+ }
+
+	
+  #body2 {
+  
+  	width : 100%;
+  	height : 155px;
+  	border : 1px solid #ccc;
+  
+  }
+
+  #body3 {
+  
+ 	 width : 100%;
+ 	 height : 659px;
+  	 border : 1px solid #ccc;
+  	 
+  }
+
+  #body4{
+  	
+  	width : 100%;
+  	height : 80px;
+  	border : 1px solid #ccc;
+  
+  }
+
+	#body1-left{
+	
+	width: 640.91px;
+	height : 220px;
+	padding-top : 20px;
+	padding-bottom : 20px;
+	padding-left : 40px;
+	padding-right : 40px;
+	
+	margin-left :40px;
+	margin-right : 40px;
+	
+	
+	border : 1px solid #ccc;
+	box-sizing: content-box;
+	position: relative;
+	
+	
+	}
+
+	
+	#body1-right{
+	
+	width: 640.91px;
+	height : 220px;
+	padding-top : 20px;
+	padding-bottom : 20px;
+	padding-left : 40px;
+	padding-right : 40px;
+	
+	margin-left :40px;
+	margin-right : 40px;
+	
+	
+	border : 1px solid #ccc;
+	box-sizing: content-box;
+	position: relative;
+	
+	}
+	
+	#body1-lefttop{
+	
+	width: 619.91px;
+	height : 52.8px;	
+	border : 1px solid #ccc;	
+	top: 0;				    /*상속되는 top이랑 left를 0으로 */
+    left: 0;
+    position: absolute;
+    
+   	display: flex; /* Flexbox 사용 */
+    justify-content: space-between; /* 요소 간 간격 조정 */
+    align-items: center; /* 수직 정렬 */
+    
+	}
+	
+	#body1-righttop{
+	
+	width: 617.91px;
+	height : 52.8px;	
+	border : 1px solid #ccc;	
+	top: 0;				    
+    left: 0;
+    position: absolute;	
+	
+	display: flex; /* Flexbox 사용 */
+    justify-content: space-between; /* 요소 간 간격 조정 */
+    align-items: center; /* 수직 정렬 */
+    
+	}
+	
+	
+	#notice1 {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    margin-top: 80px; /* 여백 조정 */
+}
+
+#notice1 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#notice1 li {
+    margin-bottom: 10px; /* 항목 간의 여백 조정 */
+}
+
+#notice1 a {
+    text-decoration: none;
+    color: #333;
+    display: flex; /* Flexbox 사용 */
+    align-items: center; /* 수직 정렬 */
+}
+
+.list_item {
+    display: flex; /* Flexbox 사용 */
+    justify-content: space-between; /* 요소 간 간격 조정 */
+    width: 100%;
+}
+
+.list_item p {
+    font-size: 14px; /* 글자 폰트 크기 */
+    margin: 0;
+    flex-grow: 1; /* 남는 공간을 차지하도록 설정 */
+}
+
+.list_item span {
+    font-size: 12px; /* 날짜 폰트 크기 */
+    color: #666;
+}
+	
+
+
+</style>
+</head>
+<body>
+<div id="head">
+    <div id="top">
+        <a href="https://cnue-e.gwe.es.kr/main.do?s=cnueees">
+            <img src="../project_sources/logo.png" alt="Logo">
+        </a>
+        <div id="login">
+            <ul>
+                <li><a href="https://cnue-e.gwe.es.kr/main.do?s=cnueees">홈</a></li>
+                <li><a href="https://cnue-e.gwe.es.kr/login.do?s=cnueees">로그인</a></li>
+                <li><a href="https://cnue-e.gwe.es.kr/join.do?s=cnueees">회원가입</a></li>
+                <li><a href="https://cnue-e.gwe.es.kr/sitemap.do?s=cnueees">사이트맵</a></li>
+             </ul>
+        </div>
+        <div class="box_search_0">
+				<form name="siteSearchForm" action="https://newsearchschool.gwe.go.kr/front/Search.jsp" method="post" target="_blank">
+					<input type="text" placeholder="검색어를 입력해주세요" id="search" name="qt" title="검색">
+					<input type="hidden" name="sysId" value="cnueees">
+					<button></button>
+			    </form>
+			</div>        
+    	</div>
+    
+    
+    <div id="menu">
+        <ul>
+<!--             <li><a href="https://cnue-e.gwe.es.kr/main.do?s=cnueees">학교소개</a></li> -->
+            <li><a href="https://cnue-e.gwe.es.kr/login.do?s=cnueees">알림마당</a></li>
+            <li><a href="https://cnue-e.gwe.es.kr/join.do?s=cnueees">부설교육자료실</a></li>
+            <li><a href="https://cnue-e.gwe.es.kr/sitemap.do?s=cnueees">참여마당</a></li>            
+            <li><a href="https://cnue-e.gwe.es.kr/sitemap.do?s=cnueees">방과후학교/돌봄교실</a></li>            
+            <li><a href="https://cnue-e.gwe.es.kr/sitemap.do?s=cnueees">Wee 클래스</a></li>            
+            <li><a href="https://cnue-e.gwe.es.kr/sitemap.do?s=cnueees">발전기금현황</a></li>            
+            <li><a href="https://cnue-e.gwe.es.kr/sitemap.do?s=cnueees">감염병예방</a></li>            
+        </ul>
+    </div>
+</div>
+<div id = containter>
+	<div id = photo>
+	<img src="../project_sources/banner.png" alt="Banner">
+	</div>
+	<div id = main>
+		
+		<div id = body1>
+					
+			<div id = body1-left>
+				<div id = body1-lefttop>
+				 
+				 <div>공지사항</div> 
+				
+				 <div>more</div>
+				 	
+				</div>
+			
+			
+			
+			<div class="list_box on" id="notice1">
+    <ul>
+        <li>
+            <a href="/boardCnts/view.do?s=cnueees&amp;m=0201&amp;boardID=67689&amp;boardSeq=8944495&amp;lev=0&amp;page=1">
+                <p>(모집공고) 2024학년도 2학기 배움터 지킴이 위촉 공고</p>
+                <span>2024.08.05</span>
+            </a>
+        </li>
+        <li>
+            <a href="/boardCnts/view.do?s=cnueees&amp;m=0201&amp;boardID=67689&amp;boardSeq=8941670&amp;lev=0&amp;page=1">
+                <p>2024 신나는 주말체육프로그램 학교 밖 프로그램 모집 안내</p>
+                <span>2024.07.30</span>
+            </a>
+        </li>
+        <li>
+            <a href="/boardCnts/view.do?s=cnueees&amp;m=0201&amp;boardID=67689&amp;boardSeq=8941272&amp;lev=0&amp;page=1">
+                <p>진로소식지 드림레터 7호</p>
+                <span>2024.07.29</span>
+            </a>
+        </li>
+        <li>
+            <a href="/boardCnts/view.do?s=cnueees&amp;m=0201&amp;boardID=67689&amp;boardSeq=8939734&amp;lev=0&amp;page=1">
+                <p>저소득층 유,청소년 스포츠 강좌 이용권 지원 사업 안내</p>
+                <span>2024.07.25</span>
+            </a>
+        </li>
+        <li>
+            <a href="/boardCnts/view.do?s=cnueees&amp;m=0201&amp;boardID=67689&amp;boardSeq=8934788&amp;lev=0&amp;page=1">
+                <p>학생정신건강증진 소식지 5호(방학)</p>
+                <span>2024.07.18</span>
+            </a>
+        </li>
+        <li>
+            <a href="/boardCnts/view.do?s=cnueees&amp;m=0201&amp;boardID=67689&amp;boardSeq=8933168&amp;lev=0&amp;page=1">
+                <p>MATH DAY 안내</p>
+                <span>2024.07.17</span>
+            </a>
+        </li>
+    </ul>
+    <a href="/boardCnts/list.do?s=cnueees&amp;m=0201&amp;boardID=67689" class="btn_more" target="_self">
+        <span class="hid">공지사항 더보기</span>
+        <span>more</span>
+        <em><i class="xi-plus-thin" aria-hidden="true"></i></em>
+    </a>
+</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			</div>
+			
+			
+			<div id = body1-right>
+				<div id = body1-righttop>
+				
+				 	 <div>가정통신문</div> 
+				
+					 <div>more</div>
+				
+				</div>
+			
+			</div>
+		</div> 
+		
+		<div id = body2>
+		</div>
+		
+		<div id = body3>
+		</div>
+		
+		<div id = body4>
+	</div>		
+</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</div>
+
+
+
+</body>
+</html>

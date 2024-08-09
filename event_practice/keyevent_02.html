@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>키보드 이벤트 예제</title>
+    <script>
+        function handleKeyDown(event) {
+            // 이벤트의 타입을 출력합니다. 예: 'keydown'
+            console.log('이벤트 타입: ' + event.type);
+            
+            // 이벤트가 발생한 요소를 출력합니다. 예: 'INPUT'
+            console.log('이벤트 타겟: ' + event.target.tagName);
+            
+            // 이벤트 핸들러가 부착된 요소를 출력합니다. 예: 'INPUT'
+            console.log('현재 타겟: ' + event.currentTarget.tagName);
+            
+            // 눌린 키의 값을 출력합니다. 예: 'a', 'Enter'
+            console.log('눌린 키: ' + event.key);
+            
+            // 눌린 키의 코드 값을 출력합니다. 예: 'KeyA', 'Enter'
+            console.log('키 코드: ' + event.code);
+            
+            // 눌린 키의 숫자 코드 값을 출력합니다. 예: 65, 13 (권장되지 않음)
+            console.log('키 숫자 코드: ' + event.keyCode);
+            
+            // Alt 키가 눌렸는지 여부를 출력합니다. 예: true 또는 false
+            console.log('Alt 키 눌림: ' + event.altKey);
+            
+            // Ctrl 키가 눌렸는지 여부를 출력합니다. 예: true 또는 false
+            console.log('Ctrl 키 눌림: ' + event.ctrlKey);
+            
+            // Shift 키가 눌렸는지 여부를 출력합니다. 예: true 또는 false
+            console.log('Shift 키 눌림: ' + event.shiftKey);
+            
+            // Meta 키가 눌렸는지 여부를 출력합니다. 예: true 또는 false
+            console.log('Meta 키 눌림: ' + event.metaKey);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" onkeydown="handleKeyDown(event)" placeholder="여기에 입력하세요">
+</body>
+</html>

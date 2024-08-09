@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>키보드 이벤트 예제</title>
+    <script>
+        function showKeyDown(event) {    // 키를 눌렀을 때 발생하는 이벤트
+            console.log('키 다운: ' + event.key);
+        }
+
+        function showKeyUp(event) {      // 키를 눌렀다가 뗄 때 발생하는 이벤트
+            console.log('키 업: ' + event.key);
+        }
+
+        function showKeyPress(event) {   // 키를 눌렀을 때 발생하는 이벤트 (Deprecated)
+            console.log('키 프레스: ' + event.key);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" onkeydown="showKeyDown(event)" onkeyup="showKeyUp(event)" onkeypress="showKeyPress(event)" placeholder="여기에 입력하세요">
+</body>
+</html>

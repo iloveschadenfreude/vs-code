@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>마우스 이벤트 예제</title>
+    <script>
+      
+        function showClick() {          //요소를 클릭할 때 발생하는 이벤트
+            alert('클릭됨');
+        }
+
+        function showMouseOver() {      //요소에 마우스를 올렸을 때 발생하는 이벤트
+            alert('마우스 오버');
+        }
+
+        function showMouseOut() {      //요소에서 마우스가 벗어났을 때 발생하는 이벤트
+            alert('마우스 아웃');
+        }
+
+        function showDoubleClick() {    //요소에 마우스를 더블클릭 했을 때 발생하는 이벤트
+            alert('더블 클릭');
+        }
+
+        function showMouseDown() {      //마우스 버튼을 눌렀을 때 발생하는 이벤트
+            alert('마우스 다운');
+        }
+
+        function showMouseUp() {        //마우스 버튼을 눌렀다가 뗄 때 발생하는 이벤트
+            alert('마우스 업');
+        }
+
+       
+        function showMouseMove() {      //요소 위에서 마우스를 움직일 때 발생하는 이벤트
+           alert('마우스 움직임');
+        }
+
+        function showMouseEnter() {     // 요소에 마우스가 처음 들어갔을 때 발생하는 이벤트
+            alert('마우스 엔터');
+        }
+
+        function showMouseLeave() {     // 요소에서 마우스가 벗어났을 때 발생하는 이벤트
+            alert('마우스 리브');
+        }
+        
+        function showContextMenu(event) {
+            event.preventDefault(); // 기본 우클릭 메뉴를 막음
+            alert('컨텍스트 메뉴');
+        }
+    </script>
+</head>
+<body>
+    <button onclick="showClick()">클릭</button>
+    <button onmouseover="showMouseOver()">마우스 오버</button>
+    <button ondblclick="showDoubleClick()">더블 클릭</button>
+    <button onmousedown="showMouseDown()">마우스 다운</button>
+    <button onmouseup="showMouseUp()">마우스 업</button>
+    <button onmouseout="showMouseOut()">마우스 아웃</button>
+    <button onmousemove="showMouseMove()">마우스 무브</button>
+    <button onmouseenter="showMouseEnter()">마우스 엔터</button>
+    <button onmouseleave="showMouseLeave()">마우스 리브</button>
+    <button oncontextmenu="showContextMenu(event)">우클릭</button>
+</body>
+</html>

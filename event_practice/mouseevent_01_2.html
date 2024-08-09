@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>마우스 이벤트 예제</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: lightgray;
+            margin: 20px;
+            position: relative;
+        }
+        .inner-box {
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+    </style>
+    <script>
+        function showMouseEnter() {
+            console.log('마우스 엔터');
+        }
+
+        function showMouseLeave() {
+            console.log('마우스 리브');
+        }
+
+        function showMouseOver() {
+            console.log('마우스 오버');
+        }
+
+        function showMouseOut() {
+            console.log('마우스 아웃');
+        }
+    </script>
+</head>
+<body>
+    <div class="box" onmouseenter="showMouseEnter()" onmouseleave="showMouseLeave()" onmouseover="showMouseOver()" onmouseout="showMouseOut()">
+        <div class="inner-box"></div>
+    </div>
+</body>
+</html>
+
+<!-- 
+mouseenter와 mouseleave: 부모 요소에서 자식 요소로 마우스가 이동할 때는 이벤트가 발생하지 않습니다. 오직 요소 자체에 마우스가 처음 들어갔을 때와 벗어났을 때만 이벤트가 발생합니다.
+mouseover와 mouseout: 부모 요소에서 자식 요소로 마우스가 이동할 때도 이벤트가 발생합니다. 즉, 요소 내부의 자식 요소들 사이를 이동할 때도 이벤트가 발생합니다. -->
