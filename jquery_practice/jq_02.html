@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script type="text/javascript">
+$(function() {
+
+    //p태그들 선택
+    var $p = $("p");
+    console.log($p);
+
+    //------------------------------------------------------------------------------------
+
+    console.log("-- $p.eq(idx) --");
+    console.log( $p.eq(0)); // jQuery DOM 객체로 반환
+
+    console.log("-- $p.get(idx)--")
+    console.log( $p.get(1)); // JS DOM 객체로 반환
+
+    console.log("-- $p[idx] --");
+    console.log( $p[2] ); // JS DOM 객체로 반환
+    
+    //------------------------------------------------------------------------------------
+
+    //해보세요!
+	
+	//글자색 빨강으로 설정
+
+    $p.get(1).style.color = "red"
+
+    $p.eq(2).css("color","blue");
+
+
+    var $span = $("span");
+
+    for(let i=0; i<$span.length; i++){
+
+        // .val('속성값') 
+		//	-> value='속성값' 에 해당하는 HTML 속성(attribute) 추가
+        //적용되는 것 없음, p태그는 value 속성 사용하지 않는다
+
+        $span.eq(i).val('test');
+        $span.eq(i).css("color","gray");
+    }
+
+    var $input = $("input");
+
+    for(let i=0; i<$input.length; i++){
+
+        $("input").eq(i).val("inputtest");
+        
+    }
+
+    var $textarea = $("textarea");
+
+    $textarea.eq(0).val("testtest");
+
+
+})
+</script>
+</head>
+<body>
+    <span>하나</span>
+	<p>둘</p>
+	<pre>셋</pre>
+	<p>넷</p>
+	<p>다섯</p>
+
+
+    <input type="text"/>
+    <input type="text"/>
+    <input type="text"/>
+    
+    <textarea></textarea>
+
+
+
+
+</body>
+</html>

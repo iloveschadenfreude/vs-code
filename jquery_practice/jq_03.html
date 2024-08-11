@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript">
+$(function() {
+    console.log($("div"));
+    
+	// .find(selector)
+	//	-> 자손 중에서 selector 에 해당하는 노드 찾기
+	console.log( $("div").find( "#stop" ) );
+
+	// 자손 선택자를 이용한 것과 같다
+	console.log( $("div #stop") );
+
+
+
+
+});
+</script>
+</head>
+<body>
+    <span>하나</span>
+	<p>둘</p>
+	<pre>셋</pre>
+	<p id="stop">넷</p>
+	<p>다섯</p>
+</body>
+</html>
