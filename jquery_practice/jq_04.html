@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script type="text/javascript">
+$(function() {
+    
+    console.log("-- div > * --");
+    console.log($("div").children());   // <div>의 직접적인 자식 요소들 즉 <ul>을 선택합니다
+    
+    console.log("-- div > * > * --");
+    console.log($("div").children().children()); //<div>의 자식 요소들의 자식 요소들 (<li>)을 선택합니다.
+
+    console.log("-- div > * > #third --");
+    console.log($("div").children().children("#third"));  //<div>의 자식 요소들 중 id="third"인 요소를 선택합니다.
+
+
+    console.log("----------------------------------------------------------------------------------------------");    
+
+    console.log("-- #here --");
+	console.log( $("#here") );   //id="here"인 요소 (<li id="here">3-2</li>)를 선택합니다.
+	
+	console.log("-- #here의 부모노드 --");
+	console.log( $("#here").parent() );     //id="here" 요소의 부모 요소 (<ul>)를 선택합니다.
+	
+	console.log("-- #here의 조상노드 --");
+	console.log( $("#here").parents() );    //id="here" 요소의 모든 조상 요소들을 선택합니다. 
+	
+	console.log("-- #here의 조상노드 중 #third --");
+	console.log( $("#here").parents( "#third" ) );  //id="here" 요소의 조상 요소들 중 id="third"인 요소를 선택합니다.
+	//-------------------------------------------------------
+	
+	console.log("-- #third의 이전 인접 형제 --");
+	console.log( $("#third").prev() );
+	
+	console.log("-- #third의 이전 일반 형제 --");
+	console.log( $("#third").prevAll() );
+	//-------------------------------------------------------
+	
+	console.log("-- #third의 다음 인접 형제 --");
+	console.log("-- #third + * --");
+	console.log( $("#third").next() );
+	
+	console.log("-- #third의 다음 일반 형제 --");
+	console.log("-- #third ~ * --");
+	console.log( $("#third").nextAll() );    
+
+
+
+});
+</script>
+</head>
+<body>
+    <div>
+
+        <ul>
+            <li>하나</li>
+            <li>둘</li>
+            <li id="third">
+                셋
+                <ul>
+                    <li>3-1</li>
+                    <li id="here">3-2</li>
+                    <li>3-3</li>
+                </ul>
+            </li>
+            <li>넷</li>
+            <li>다섯</li>
+        </ul>
+        
+        </div>
+</body>
+</html>

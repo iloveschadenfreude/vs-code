@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오 문제</title>
+    <style type="text/css">
+
+        html, body {
+            height: 100%; 
+            margin: 0;
+        }
+
+        fieldset {
+            width: 100%;
+            margin: 10px 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        #topdiv {
+            width: 50%;
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #bottomtable {
+            width: 100%;            
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+
+        th {
+            background-color: #f5f5f5;
+        }
+
+        input[type="text"], textarea, input[type="file"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f7941e;
+            color: white;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        button:hover {
+            background-color: #e67e22;
+        }
+
+        .link-button {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .link-button:hover {
+            text-decoration: underline;
+        }
+
+        .total-count {
+            background-color: #f5f5f5;
+            font-weight: bold;
+        }
+
+        #tablehead, #tablefoot {
+            background-color: tomato;
+            color: white;
+            font-weight: bold;
+        }       
+
+    </style>
+</head>
+<body>
+    <h1>포트폴리오 문제</h1>  
+    <hr>
+    <form action="insert.no" method="post">
+        <fieldset>
+            <legend>공지사항 작성하기</legend>
+            <div id="topdiv">
+                <div style="margin-bottom: 10px;">
+                    <label for="title">제목</label>
+                    <input type="text" id="title" name="title" placeholder="제목을 입력하세요." required>
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <label for="content">내용</label>
+                    <textarea id="content" name="content" placeholder="내용을 입력하세요." required></textarea>
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <label for="uploadFile">첨부파일</label>
+                    <input type="file" id="uploadFile" name="uploadFile">
+                </div>
+                <button type="submit">작성하기</button>
+            </div>
+        </fieldset>
+    </form>
+
+    <table id="bottomtable">
+        <thead id="tablehead">
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>작성일</th>
+                <th>조회수</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>9</td>
+                <td>공지사항 제목 9 <button class="link-button" onclick="window.location.href='#'">바로가기</button></td>
+                <td>user01</td>
+                <td>2021-03-29</td>
+                <td>34</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>공지사항 제목 8 <button class="link-button" onclick="window.location.href='#'">바로가기</button></td>
+                <td>answ445</td>
+                <td>2021-03-12</td>
+                <td>67</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>공지사항 제목 7 <button class="link-button" onclick="window.location.href='#'">바로가기</button></td>
+                <td>testg12</td>
+                <td>2021-01-15</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>공지사항 제목 6 <button class="link-button" onclick="window.location.href='#'">바로가기</button></td>
+                <td>palwe3</td>
+                <td>2020-07-02</td>
+                <td>85</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>공지사항 제목 5 <button class="link-button" onclick="window.location.href='#'">바로가기</button></td>
+                <td>xml23</td>
+                <td>2020-12-24</td>
+                <td>124</td>
+            </tr>
+        </tbody>
+        <tfoot id="tablefoot">
+            <tr>
+                <td colspan="5">전체공지사항 갯수: 5개</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

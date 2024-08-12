@@ -1,3 +1,4 @@
+<!-- jq05 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +8,8 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script type="text/javascript">
 $(function() {
+
+
     console.log($("div"));
     
 	// .find(selector)
@@ -16,8 +19,44 @@ $(function() {
 	// 자손 선택자를 이용한 것과 같다
 	console.log( $("div #stop") );
 
+	console.log("-----------------------------------------");
+
+	//jqDOM객체.is(jqDOM)객체
+	// -> 두 객체가 같은 객체인지 비교한다
+	// -> boolaen 반환
+
+	console.log( $("p").eq(0).is($("#stop")));	//    둘     false
+	console.log( $("p").eq(1).is( $("#stop")));      //    넷   true
+
+	//--------------------------------------------------------------------------------------
+
+	//* 0,1,2가 순서대로 function을 호출
+	//익명 함수 : 이름이 없는 함수, 특정 상황에서 일회용으로 사용되는 함수
+
+	// $("p").each(   function(){
+
+	// 	$(this).css('background','gray');
+
+	// });
 
 
+	$("p").each(function() {
+
+
+        if ($("#stop").is($(this))) {
+            // 현재, 호출된 콜백 함수를 중단하고 다음 반복으로 넘어감
+			// 즉, 현재 요소에 대한 처리를 중단하고, 다음 요소에 대한 처리를 계속 진행
+			// Java의 continue키워드와 유사한 기능을 함
+			return;	
+
+			// 현재 실행 중인 콜백 함수뿐만 아니라, 앞으로 남은 모든 콜백 함수의 실행을 중단
+			// 즉 each 반복문을 완전히 중단
+            // return false; 
+        }
+
+		$(this).css('background', 'gray');	
+
+    });
 
 });
 </script>
