@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script type="text/javascript">
+$(function() {
+
+	//p태그들선택
+	var $p = $("p");
+	console.log( $p );
+	//---------------------------------------------------------------
+	
+	console.log('-- $p.eq(idx) --');
+	console.log( $p.eq(0) ); // jQuery DOM 객체로 반환
+	
+	console.log('-- $p.get(idx) --');
+	console.log( $p.get(1) ); // JS DOM 객체로 반환
+	
+	console.log('-- $p[idx] --');
+	console.log( $p[2] ); // JS DOM 객체로 반환
+	//---------------------------------------------------------------
+
+	//해보세요!
+	
+	//글자색 빨강으로 설정
+// 	$p.get(1) -> JS DOM API -> .style
+	
+	$p.get(1).style.color = 'red';
+	
+	
+	//글자색 파랑으로 설정
+// 	$p.eq(2) -> jQuery DOM API -> .css()
+
+	$p.eq(2).css("color", "blue");
+	//---------------------------------------------------------------
+	
+	//jQuery 객체의 .length 프로퍼티 이용하기
+	for( let i=0; i<$p.length; i++ ) {
+		
+		// .val('속성값')
+		//	-> value='속성값' 에 해당하는 HTML 속성(attribute) 추가
+		
+		//적용되는 것 없음, p태그는 value 속성 사용하지 않는다
+		$p.eq(i).val( 'test' );
+		
+		//-----------------------------------------------------------
+		
+		// .html('속성값')
+		//	-> innerHTML = '속성값'
+		
+		// .text('속성값')
+		//	-> innerText = '속성값'
+		
+		$p.eq(i).html( 'hihi ' + i );
+	}	
+	//---------------------------------------------------------------
+	
+	//jQuery DOM 객체들을 모두 한번씩 반복에 활용한다
+	$('p').each(function( i, e ) {
+		
+// 		console.log("i", i); //index, 인덱스
+// 		console.log("e", e); //element, 요소, JS DOM 객체
+		//-----------------------------------------------------------
+
+		//jQuery DOM 객체로 변환하기
+// 		console.log("$(e)", $(e));
+		//-----------------------------------------------------------
+		
+		//this키워드
+		//	-> 반복에 적용된 JS DOM 객체
+		//	-> 두 번째 매개변수 e 와 같다
+// 		console.log( this );
+		console.log( $(this) );
+	})
+	
+	$("p").each(function() {
+		console.log( $(this).html() );
+	})
+})
+</script>
+</head>
+<body>
+
+<div>
+	<span>하나</span>
+	<p>둘</p>
+	<pre>셋</pre>
+	<p>넷</p>
+	<p>다섯</p>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
+
 <script type="text/javascript">
 $(function() {
-    
+
     console.log("-- div > * --");
     console.log($("div").children());   // <div>의 직접적인 자식 요소들 즉 <ul>을 선택합니다
-    
+
     console.log("-- div > * > * --");
     console.log($("div").children().children()); //<div>의 자식 요소들의 자식 요소들 (<li>)을 선택합니다.
 
     console.log("-- div > * > #third --");
     console.log($("div").children().children("#third"));  //<div>의 자식 요소들 중 id="third"인 요소를 선택합니다.
-
 
     console.log("----------------------------------------------------------------------------------------------");    
 
@@ -48,8 +50,6 @@ $(function() {
 	console.log("-- #third의 다음 일반 형제 --");
 	console.log("-- #third ~ * --");
 	console.log( $("#third").nextAll() );    
-
-
 
 });
 </script>

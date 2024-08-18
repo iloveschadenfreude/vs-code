@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+//QUIZ.
+//현재 시 분 초 를 1초마다 출력하기
+
+//console출력
+//시:분:초 형태로 출력한다
+
+//------------------------------------------------------------
+
+//현재 시간 객체
+// var now = new Date();
+// console.log( now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds() );
+//------------------------------------------------------------
+
+//현재 시간 출력 함수
+function showTime() {
+	var now = new Date();
+	console.log( now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds() );
+}
+
+// showTime();
+
+// setInterval( showTime, 1000 );
+//------------------------------------------------------------
+
+// setInterval(function() {
+// 	var now = new Date();
+// 	console.log( now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds() );
+// }, 1000);
+//------------------------------------------------------------
+
+// setInterval(()=>{
+// 	var now = new Date();
+// 	console.log( now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds() );
+// }, 1000);
+//------------------------------------------------------------
+
+// setInterval(()=>{
+// 	var now = new Date();
+	
+// 	var h = ('0' + now.getHours()).slice(-2);
+// 	var m = ('0' + now.getMinutes()).slice(-2);
+// 	var s = ('0' + now.getSeconds()).slice(-2);
+	
+// 	console.log( h + ":" + m + ":" + s);
+	
+// }, 1000);
+//------------------------------------------------------------
+
+let to2Digit = n => ('0' + n).slice(-2);
+
+setInterval(()=>{
+	var now = new Date();
+	
+	var h = to2Digit( now.getHours() );
+	var m = to2Digit( now.getMinutes() );
+	var s = to2Digit( now.getSeconds() );
+	
+	console.log( h + ":" + m + ":" + s);
+	
+}, 1000);
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

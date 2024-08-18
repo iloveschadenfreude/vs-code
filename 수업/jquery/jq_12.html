@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script type="text/javascript">
+$(function() {
+	
+	$("<p>")	//p태그 생성
+	.html("둘")	//내용물 채우기
+	.addClass("colorBlue")	//클래스 항목 추가
+	.addClass("bgRed")	//클래스 항목 추가
+	.insertAfter(	//다음 형제로 노드 추가
+		$("div")	//div태그 찾기
+		.find("p")	//자손들 중에서 p태그들 찾기 
+		.eq(0)	//0번째 인덱스 선택
+	);
+	
+});
+</script>
+
+<style type="text/css">
+.colorBlue {	color: blue; }
+.bgRed {	background-color: red; }
+</style>
+
+</head>
+<body>
+
+<!-- QUIZ. -->
+<!-- p태그를 1개 생성 -->
+<!-- 내용물은 "둘"로 작성 -->
+
+<!-- 스타일 지정
+<!-- 글자색: 파랑 -->
+<!-- 배경색: 빨강 -->
+
+<!-- 하나, 둘, 셋, 넷 순서에 맞게 추가하기 -->
+
+<div>
+	<p>하나</p>
+	
+	<p>셋</p>
+	<p>넷</p>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

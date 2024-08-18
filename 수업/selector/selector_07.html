@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+/* 마우스가 올라간 상태의 div 요소 선택 */
+/* 		mouseover 이벤트에서 CSS 적용 */
+/* 		mouseout 이벤트에서 CSS 해제 */
+div:hover {
+	color: red;
+}
+
+/* 마우스가 올라간 상태의 span 선택 */
+span:hover {
+	background-color: green;
+}
+
+/* ---------------------------------------------------- */
+
+/* mousedown이 발생한 span 선택 */
+span:active {
+	color: orange;
+	font-size: 30px;
+}
+
+/* mousedown이 발생한 button 선택 */
+button:active {
+	color: blue;
+}
+
+/* 마우스 눌림이 발생한 type속성이 "button"인 input 선택 */
+input[type="button"]:active {
+	color: tomato;
+}
+
+/* ---------------------------------------------------- */
+
+a {
+	/* 밑줄 제거 */
+	text-decoration: none;
+}
+
+a:link {
+	color: green;
+}
+
+a:visited {
+	color: red;
+}
+
+/* ctrl + shift + del : 브라우저의 인터넷 사용 기록 삭제 단축키 */
+/* (주의! 자동 로그인, 로그인 유지 등등 걸어놓은 거 다 풀림) */
+
+/* ---------------------------------------------------- */
+
+:disabled {
+	font-size: 8px;
+}
+
+:enabled {
+	font-style: italic;
+}
+
+/* ---------------------------------------------------- */
+
+/* id가 chk인 요소의 인접 형제 label태그 */
+#chk + label {
+	border: 1px solid blue;
+}
+
+:checked {
+	width: 50px;
+	height: 50px;
+}
+
+/* ---------------------------------------------------- */
+
+/* 포커스를 얻은 요소 선택 - focus이벤트 */
+/* 포커스를 잃을 때 해제된다 - blur이벤트 */
+:focus {
+	color: maroon;
+}
+
+/* ---------------------------------------------------- */
+
+/* :empty { */
+div:empty {
+	height: 50px;
+	background: yellow;
+}
+
+/* <hr>이나 <input> 같은 닫는 태그를 사용하지 않는 태그도
+	함께 선택되므로 조심할 것! */
+	
+/* ---------------------------------------------------- */
+
+/* cursor속성: 요소 위에 올라온 마우스 커서 변경 */
+
+#chk {
+	/* 손가락 커서 */
+	cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+
+<h1>가상 선택자</h1>
+<hr>
+
+<div>
+
+<span>span태그 안쪽</span>span태그 바깥쪽<br>
+<input type="button" value="확인"><br>
+
+<a href="https://www.naver.com/">네이버</a>
+<a href="https://www.daum.net/">다음</a>
+<a href="https://www.daum.net/">다음</a>
+
+<hr>
+
+<label><input type="checkbox">확인</label>
+<label><input type="radio">라디오</label>
+
+<input type="checkbox" id="chk">
+<label for="chk">체크</label>
+
+<hr>
+
+<button disabled="disabled">비활성 버튼</button>
+<button>활성 버튼</button>
+
+<hr>
+
+<div></div>
+<input type="text">
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
+
